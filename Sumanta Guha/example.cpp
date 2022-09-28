@@ -22,9 +22,9 @@ void drawScene(void)
 	// Modeling transformations.
 	glTranslatef(X, Y, Z);
 
-	//glutWireCube(5.0); // Box.
+	glutWireCube(5.0); // Box.
 	//glutWireTeapot(5.0); // Teapot
-	glutWireCylinder(2.0, 5.0, 10.0, 2.0); //1
+	//glutWireCylinder(2.0, 5.0, 10.0, 2.0); //1
     //glRotated(60,2,0,0); //Rotasi
     //glRotatef(90.0, 0.0, 0.0, 1.0); //A.
     //glRotatef(90.0, 0.0, 0.0, 5.0); //B.
