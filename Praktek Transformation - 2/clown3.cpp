@@ -112,6 +112,31 @@ void drawScene(void)
 	glPopMatrix();
 	// //*** clown3.cpp ends here. ***
 	
+	//hidung
+	glPushMatrix();
+	glColor3f(0.0,-1.0,0.0);
+	glTranslatef(0.0,1.0,0.0);
+	glRotated(90,1.0,0.0,0.0);
+	glutWireCone(0.5,2.1,10.0,1.0);
+	glPopMatrix();
+
+	//matakanan
+	glPushMatrix();
+	glColor3f(0.0,1.0,0.0);
+	glTranslatef(0.0,1.0,0.0);
+	glScalef(2.5,0.0,0.0);
+	glRotated(90,1.0,0.0,0.0);
+	glutWireCone(0.5,2.1,10.0,1.0);
+	glPopMatrix();
+
+	//mata kiri
+	glPushMatrix();
+	glColor3f(0.0,1.0,0.0);
+	glTranslatef(0.0,1.0,0.0);
+	glScalef(2.5,0.0,0.0);
+	glRotated(90,1.0,0.0,0.0);
+	glutWireCone(0.5,2.1,10.0,1.0);
+	glPopMatrix();
 
 	glutSwapBuffers();
 }
