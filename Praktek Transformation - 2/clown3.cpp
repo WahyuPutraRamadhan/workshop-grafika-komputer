@@ -53,24 +53,24 @@ void drawScene(void)
 	//*** clown1.cpp ends here. ***
 	
 	
-	/*
-	//*** clown2.cpp starts here. ***
-	glPushMatrix();
-	// Transformations of the hat and brim.
+	
+	// //*** clown2.cpp starts here. ***
+	 glPushMatrix();
+	// // Transformations of the hat and brim.
 	glRotatef(angle, 0.0, 1.0, 0.0);
 	glRotatef(30.0, 0.0, 0.0, 1.0);
 	glRotatef(-90.0, 1.0, 0.0, 0.0);
 	glTranslatef(0.0, 0.0, 2.0);
-	// Hat.
+	// // Hat.
 	glColor3f(0.0, 1.0, 0.0);
 	glutWireCone(2.0, 4.0, 20, 20);
-	// Brim.
+	// // Brim.
 	glutWireTorus(0.2, 2.2, 10, 25);
 	glPopMatrix();
-	//*** clown2.cpp ends here. ***
-	*/
+	// //*** clown2.cpp ends here. ***
 	
-	//*
+	
+	
 	//*** clown3.cpp starts here. NOTE: Also leave the part for clown2.cpp above uncommented. ***
 	glPushMatrix();
 	// Transformations of the left ear.
@@ -81,7 +81,7 @@ void drawScene(void)
 	glutWireSphere(0.5, 10, 10);
 	glPopMatrix();
 	glPushMatrix();
-	// Transformations of the right ear.
+	// // Transformations of the right ear.
 	glTranslatef(-sin((M_PI/180.0)*angle), 0.0, 0.0);
 	glTranslatef(-3.5, 0.0, 0.0);
 	// Right ear.
@@ -89,7 +89,7 @@ void drawScene(void)
 	glutWireSphere(0.5, 10, 10);
 	glPopMatrix();
 	glPushMatrix();
-	// Transformations of the spring to the left ear.
+	// // Transformations of the spring to the left ear.
 	glTranslatef(-2.0, 0.0, 0.0);
 	glScalef(-1 - sin( (M_PI/180.0) * angle ), 1.0, 1.0);
 	// Spring to left ear.
@@ -101,15 +101,15 @@ void drawScene(void)
 	glPopMatrix();
 	glPushMatrix();
 	// // Transformations of the spring to the right ear.
-	// glTranslatef(2.0, 0.0, 0.0);
-	// glScalef(1 + sin( (M_PI/180.0) * angle ), 1.0, 1.0);
+	glTranslatef(2.0, 0.0, 0.0);
+	glScalef(1 + sin( (M_PI/180.0) * angle ), 1.0, 1.0);
 	// // Spring to right ear.
-	// glColor3f(0.0, 1.0, 0.0);
-	// glBegin(GL_LINE_STRIP);
-	// for(t = 0.0; t <= 1.0; t += 0.05)
-	// glVertex3f(t, 0.25 * cos(10.0 * M_PI * t), 0.25 * sin(10.0 * M_PI * t));
-	// glEnd();
-	// glPopMatrix();
+	glColor3f(0.0, 1.0, 0.0);
+	glBegin(GL_LINE_STRIP);
+	for(t = 0.0; t <= 1.0; t += 0.05)
+	glVertex3f(t, 0.25 * cos(10.0 * M_PI * t), 0.25 * sin(10.0 * M_PI * t));
+	glEnd();
+	glPopMatrix();
 	// //*** clown3.cpp ends here. ***
 	
 
