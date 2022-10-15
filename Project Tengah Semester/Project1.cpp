@@ -1,10 +1,3 @@
-/////////////////////////////////          
-// box.cpp
-//
-// This program draws a wire box.
-//
-// Sumanta Guha.
-/////////////////////////////////
 #include <GL/glew.h>
 #include <GL/freeglut.h> 
 
@@ -22,18 +15,10 @@ void drawScene(void)
 	// Modeling transformations.
 	glTranslatef(X, Y, Z);
 
-	glutWireCube(5.0); // Box.
-	//glutWireTeapot(5.0); // Teapot
-	//glutWireCylinder(2.0, 5.0, 10.0, 2.0); //1
-    //glRotated(60,2,0,0); //Rotasi
-    //glRotatef(90.0, 0.0, 0.0, 1.0); //A.
-    //glRotatef(90.0, 0.0, 0.0, 5.0); //B.
-	// glPushMatrix();
-	// glutSolidCylinder(2.0,0.5,25.0,1.0);//jam
-	// glPopMatrix();
-    //glutSolidCube(5.0);//soal 2
-    //glutSolidSphere(-5.0, 5.0, -5.0, 5.0, 5.0, 100.0);//soal 2 eror
-    //glutSolidTeacup(2.0,10.0,15.0,2.0);//eror
+	glPushMatrix();
+	glutSolidCylinder(6.0,0.5,25.0,1.0);//jam dinding
+	glPopMatrix();
+    
 	glFlush();
 }
 // Initialization routine.
@@ -101,7 +86,7 @@ int main(int argc, char **argv)
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA);
 	glutInitWindowSize(500, 500);
 	glutInitWindowPosition(100, 100);
-	glutCreateWindow("box.cpp");
+	glutCreateWindow("jam dinding.cpp");
 	glutDisplayFunc(drawScene);
 	glutReshapeFunc(resize);
 	glutKeyboardFunc(keyInput);
